@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+<body>
+<!--
+Обязательное задание.
+
+Необходимо скопировать и вставить в данный скрипт все функции из 4 задания.
+Необходимо реализовать функцию:
+mathOperation(arg1, arg2, operation);
+Параметры:
+arg1 - первое число.
+arg2 - второе число.
+operation - строка, которая содержит один символ из: "+", "-", "*", "/".
+Функция mathOperation должна вернуть результат операции, который был передан в
+параметр operation для двух первых аргументов (arg1 и arg2).
+Функция mathOperation должна использовать для вычисления функции из 4 задания.
+
+Примеры вызова функции:
+console.log(mathOperation(5, 3, "+")); // 8
+console.log(mathOperation(5, 3, ":)")); // NaN
+
+Функции mathOperation всегда передаются корректные числа, проверки на NaN,
+Infinity делать не нужно, однако, в случае если был передан некорректный
+аргумент в параметр operation, необходимо вернуть NaN.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+<script>
+  "use strict";
+
+  /**
+   Вычисляет операцию, переданную в третий параметр
+   @param {number} arg1 - аргумент 1
+   @param {number} arg2 - аргумент 2
+   @param {string} operation - символ операции "+", "-", "*", "/"
+   @return {number} - Результат операции
+   */
+  function mathOperation(arg1, arg2, operation) {
+    return {"+": "plus", "-": "minus", "*": "times", "/": "divide"}[operation](arg1, arg2);
+  }
+
+  /**
+   Считает сумму переданных аргументов
+   @param {number} arg1 - аргумент 1
+   @param {number} arg2 - аргумент 2
+   @return {number} - сумма чисел
+   */
+  function plus(arg1, arg2) {
+    return arg1 + arg2;
+  }
+
+  /**
+   Считает разницу переданных аргументов (из большего вычитает меньшее)
+   @param {number} arg1 - аргумент 1
+   @param {number} arg2 - аргумент 2
+   @return {number} - разница чисел
+   */
+  function minus(arg1, arg2) {
+    return (arg1 > arg2) ? arg1 - arg2 : arg2 - arg1;
+  }
+
+  /**
+   Считает произведение переданных аргументов
+   @param {number} arg1 - аргумент 1
+   @param {number} arg2 - аргумент 2
+   @return {number} - произведение чисел
+   */
+  function times(arg1, arg2) {
+    return arg1 * arg2;
+  }
+
+  /**
+   Считает частное переданных аргументов
+   @param {number} arg1 - аргумент 1
+   @param {number} arg2 - аргумент 2
+   @return  {number} - частное чисел
+   */
+  function divide(arg1, arg2) {
+    return arg1 / arg2;
+  }
+</script>
+</body>
+</html>
