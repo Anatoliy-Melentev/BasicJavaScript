@@ -27,16 +27,19 @@ console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
 
   /**
    * Функция склоенения слов
-   * @param number - число откоторого склоняем
-   * @param one - склоенине для единицы
-   * @param two - склонение для 2-4
-   * @param many - склоение для больших чисел
+   * @param {number} number - число откоторого склоняем
+   * @param {number} one - склоенине для единицы
+   * @param {number} two - склонение для 2-4
+   * @param {number} many - склоение для больших чисел
    * @returns {string} - слово в нужном склонении
    */
-  function declinationOfNumber(number, one = "яблоко", two = "яблока", many = "яблок") {
-    let tens = Math.abs(number) % 100, units = Math.abs(number) % 10;
+  function declinationOfNumber(number, one, several, many) {
+    const /* Нравится с переносами, все переменные на одной линии */
+      between = (start, it, end) => start < it && it < end,
+      tens = Math.abs(number) % 100,
+      units = Math.abs(number) % 10;
 
-    return [one, two, many][4 < tens && tens < 21 ? 2 : 1 < units && units < 5 ? 1 : units === 1 ? 0 : 2];
+    return [one, several, many][between(4, tens, 21) ? 2 : between(1, units, 5) ? 1 : units === 1 ? 0 : 2];
   }
 </script>
 </body>

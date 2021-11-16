@@ -40,7 +40,8 @@ Infinity делать не нужно, однако, в случае если б
    @return {number} - Результат операции
    */
   function mathOperation(arg1, arg2, operation) {
-    return {"+": "plus", "-": "minus", "*": "times", "/": "divide"}[operation](arg1, arg2);
+    return {'+': plus, '-': minus, '*': times, '/': divide}[operation](arg1, arg2);
+    /* C кавычками тоже работало, весь код проверяю всегда */
   }
 
   /**
