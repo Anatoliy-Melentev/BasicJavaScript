@@ -34,7 +34,7 @@ console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
    * @returns {string} - слово в нужном склонении
    */
   function declinationOfNumber(number, one, several, many) {
-    const /* Нравится с переносами, все переменные на одной линии */
+    const
       between = (start, it, end) => start < it && it < end,
       tens = Math.abs(number) % 100,
       units = Math.abs(number) % 10;
