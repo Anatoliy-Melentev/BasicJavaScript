@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+<body>
+<!--
+Обязательное задание.
+
+Необходимо данное задание выполнить в es5 стиле и в es6 стиле.
+Необходимо создать функцию-конструктор/класс для продукта.
+Названия: `ProductES5` для es5 стиля, `ProductES6` для es6 стиля.
+При создании объекта от функции-конструктора/класса необходимо передавать имя
+и цену товара, эта информация должна быть сохранена в объекте.
+Также у объекта должна быть возможность выполнить метод `make25Discount`, данный
+метод должен уменьшать стоимость продукта на 25%.
+Необходимо продемонстрировать работу с объектом (в свободной форме).
+-->
+<script>
+  "use strict";
+
+  function ProductES5(productName, productPrice) {
+    this.sales = 25;
+    this.productName = productName;
+    this.productPrice = productPrice;
+  }
+
+  ProductES5.prototype.make25Discount = function() {
+    this.productPrice *= (100 - this.sales) / 100;
+  };
+
+  class ProductES6 {
+    constructor(productName, productPrice) {
+      this.sales = 25;
+      this.productName = productName;
+      this.productPrice = productPrice;
+    }
+    make25Discount = () => this.productPrice *= (100 - this.sales) / 100;
+  }
+
+  /**
+   * Функция вывода рекламных слоганов с акциями
+   * @param {array} products - массив с обьектами фруктов
+   * @returns {string} - рекламные слоганы для акционного товара в консоль
+   */
+  function showPromotions(products) {
+    products.forEach((product) => {
+      if (typeof product === 'object') {
+        console.log(`${product.productName} - только сегодня скидка ${product.sales}%!! ` +
+        `Всего за ${product.productPrice} руб.`);
+      }
+    });
+  }
+
+  let
+      pear = new ProductES5('Груши', 100),
+      apples = new ProductES5('Яблоки', 100),
+      bananas = new ProductES6('Бананы', 100),
+      watermelons = new ProductES6('Арбузы', 100),
+
+      fruits = [pear, apples, bananas, watermelons];
+
+  fruits.forEach((fruit) => fruit.make25Discount());
+
+  showPromotions(fruits);
+</script>
+</body>
+</html>
