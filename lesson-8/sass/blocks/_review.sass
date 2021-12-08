@@ -1,0 +1,16 @@
+.review
+	width: 360px
+	@include tablet
+		margin: 53px auto 48px
+	@include mini
+		width: 100%
+
+	&__userpic
+		@include size(96,96)
+		border-radius: 50% 50%
+		margin: 30px auto
+
+	&__message
+		@include font(20,24)
+		text-align: center
+		color: $black-text

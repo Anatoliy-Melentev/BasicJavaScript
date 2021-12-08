@@ -68,6 +68,10 @@
     defaultRangeValue = range.value;
 
   tabsEl.addEventListener('click', ({target}) => {
+    if (!target.classList.contains('nav-link')) {
+      return;
+    }
+
     tabsEl.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
     target.classList.add('active');
     inputDiv.innerText = panelText[target.parentElement.dataset.text];
@@ -81,7 +85,7 @@
    */
 	range.addEventListener('input', ({target}) => {
 		inputDiv.style.fontSize = target.value * defaultFontSize / defaultRangeValue + 'px';
-	})
+	});
 
 </script>
 </body>

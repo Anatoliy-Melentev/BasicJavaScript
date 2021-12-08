@@ -1,0 +1,69 @@
+.header
+	background-color: $black-back
+	position: relative
+	flex: 0 0 auto
+
+	&__wrp
+		@include flex-space()
+		min-height: 75px
+
+	&__wrp-controls
+		@include flex-center()
+
+	&__logo-link
+		margin-right: 41px
+
+	&__search-form
+		display: inline-block
+
+	&__link
+		margin-left: 31px
+		position: relative
+		background-color: transparent
+		border: none
+		@include mobile
+			display: none
+
+	&__icon
+		fill: $white-icon
+
+	&__menu-btn
+		border: none
+		background-color: transparent
+
+	&__nav
+		z-index: 100
+		display: none
+		box-sizing: border-box
+		@include offset(75,0)
+		background-color: white
+		@include size(232,764)
+		padding-left: 34px
+		box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+
+	&__menu-btn:focus + &__nav,
+	&__nav:hover
+		display: block
+
+	&__link:focus + &__card-menu,
+	&__card-menu:hover
+		display: block
+
+	&__menu-title
+		@include font(14,17,bold)
+		color: black
+		text-transform: uppercase
+		margin-bottom: 24px
+		margin-top: 37px
+
+	&__quantity
+		background-color: $pink-text
+		text-decoration: none
+		@include size(auto, auto)
+		padding: 1px 6px
+		@include offset($top:-10,$left:26)
+		border-radius: 10px
+		color: white
+		@include font(16,19,700)
+
+

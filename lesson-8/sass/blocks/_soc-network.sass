@@ -1,0 +1,31 @@
+.soc-network
+
+	&__list
+		display: flex
+
+	&__item
+		@include size(32,32)
+		margin: 7px
+		background-color: white
+		transition-duration: .5s
+		&:hover
+			background-color: $pink-text
+			transition-duration: .5s
+			.soc-network__icon
+				fill: white
+				transition-duration: .5s
+
+		&:active
+			.soc-network__icon
+				transform: rotate(360deg)
+				transition-duration: .5s
+
+
+	&__link
+		@include size(32,32)
+		@include flex-center()
+		text-decoration: none
+
+	&__icon
+		transition-duration: .5s
+		fill: black

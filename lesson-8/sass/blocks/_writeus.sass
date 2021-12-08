@@ -1,0 +1,32 @@
+.writeus
+	width: 557px
+	text-align: center
+
+	@include tablet
+		@include size(422,auto)
+		margin-bottom: 108px
+
+	@include tablet
+		@include size(full,auto)
+		margin-bottom: 108px
+
+	&__input
+		flex-grow: 1
+		@include mini
+			width: auto
+
+	&__title
+		@include font(24,38,bold)
+		text-transform: uppercase
+		text-align: center
+		color: $black-text
+
+	&__desc
+		@include font(18,30,400)
+		text-transform: uppercase
+		text-align: center
+		color: $black-text
+
+	&__form
+		padding: 32px 0
+		@include flex-center()

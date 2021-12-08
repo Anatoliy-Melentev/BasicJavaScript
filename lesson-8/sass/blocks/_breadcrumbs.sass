@@ -1,0 +1,28 @@
+.breadcrumbs
+	&__item
+		display: inline
+		@include font(14,17,300)
+		&::after
+			content: '/'
+			margin: 0 10px
+		&:last-child::after
+			content: ''
+			margin: 0
+
+	&__link
+		color: gray
+		text-decoration: none
+		text-transform: uppercase
+		&:active,
+		&:hover,
+		&:focus
+			color: gray
+			text-decoration: underline
+		&_active
+			font-weight: 700
+			color: $pink-text
+			&:active,
+			&:hover,
+			&:focus
+				color: $pink-text
+				text-decoration: underline

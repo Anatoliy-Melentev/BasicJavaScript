@@ -1,0 +1,74 @@
+.product-cart
+	@include size(652,306)
+	margin-bottom: 40px
+
+	box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13)
+	@include tablet
+		@include wrapper(54%)
+		@include size(full,auto)
+
+	&__wrp
+		@include size(full,full)
+		display: flex
+		text-decoration: none
+		@include tablet
+			@include offset(0,0,0,0)
+
+	&__img
+		height: 100%
+
+	&__specific-chap
+		flex-grow: 1
+		width: auto
+		padding: 22px 32px
+		position: relative
+		box-sizing: border-box
+		display: inline-block
+		@include mobile
+			padding: 13px 30px 0 17px
+
+	&__cls-btn
+		@include offset(22,22)
+		@include mobile
+			@include offset(12,12)
+
+	&__title
+		@include font(24,29)
+		width: 262px
+		margin-bottom: 42px
+		text-transform: uppercase
+		color: $black-text
+
+		@include mobile
+			@include font(16,19)
+			margin-bottom: 26px
+			width: auto
+
+		@include mini
+			@include font(12,16)
+			margin-bottom: 12px
+
+	&__specific-list
+		@include font(22,26)
+		color: #575757
+
+	&__specific-item
+		margin-bottom: 6px
+		display: flex
+
+		@include mobile
+			@include font(16,19)
+
+		@include mini
+			@include font(12,16)
+
+	&__specific-value
+		&_pink
+			color: $pink-text
+
+	&__specific-input-value
+		@include size(43,24)
+
+		@include mini
+			@include font(12,16)
+			padding: 8px 13px

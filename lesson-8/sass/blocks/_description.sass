@@ -1,0 +1,54 @@
+.description
+	@include flex-center(column)
+	text-align: center
+	padding: 64px
+	margin-top: -64px
+	border: 1px solid #eaeaea
+	background-color: white
+	z-index: 100
+	position: relative
+
+	@include tablet
+		max-width: 100%
+		margin-top: 0px
+	@include mobile
+		padding: 24px
+
+	&__sex-title
+		text-transform: uppercase
+		color: $pink-text
+		@include font(14,17,300)
+		&:after
+			content: ""
+			display: block
+			@include size(63,3)
+			background-color: $pink-icon
+			margin: 12px auto
+
+	&__name
+		color: #4d4d4d
+		text-transform: uppercase
+		@include font(18,22,300)
+		margin-bottom: 48px
+
+	&__text
+		text-align: center
+		width: 566px
+		color: #5e5e5e
+		@include font(14,17,300)
+		margin-bottom: 32px
+		@include mobile
+			width: 100%
+
+	&__price
+		@include font(24,29,300)
+		color: $pink-text
+
+	&__hr
+		@include size(641,1)
+		background-color: #eaeaea
+		margin: 65px auto 65px
+		@include tablet
+			width: 100%
+			margin-left: 100px
+			margin-right: 100px

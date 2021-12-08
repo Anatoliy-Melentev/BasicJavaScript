@@ -1,0 +1,62 @@
+.brand
+	background-color: $pink-back
+
+	@include tablet
+		@include wrapper(47%)
+
+	@include mobile
+		height: 363px
+		padding-top: 0
+
+	&__wrapper
+		display: flex
+		@include tablet
+			@include offset(0,0,0,0)
+		@include mobile
+			position: static
+			height: 363px
+
+	&__wrp
+		flex-grow: 1
+		padding-left: 92px
+		display: flex
+		align-items: center
+		@include tablet
+			padding-left: 39px
+
+	&__img
+		@include mobile
+			display: none
+
+	&__title
+		@include font(48,58,900)
+		letter-spacing: 0em
+		text-transform: uppercase
+
+		@include tablet
+			@include font(44,52)
+
+		@include mobile
+			@include font(38,45)
+
+	&__title::before
+		content: ''
+		display: block
+		@include size(12,92)
+		background-color: $pink-icon
+		float: left
+		margin-right: 16px
+
+	&__subtitle
+		@include font(32,38,700)
+		display: block
+		white-space: nowrap
+
+		@include tablet
+			@include font(24,29)
+
+		@include mobile
+			@include font(20,24)
+
+	&__subtitle-pink
+		color: $pink-text

@@ -1,0 +1,47 @@
+.checkout
+	@include size(360,214)
+	background-color: #F5F3F3
+	padding: 39px 34px
+	box-sizing: border-box
+	text-transform: uppercase
+	text-align: center
+
+	@include tablet
+		margin-top: 38px
+
+	@include mobile
+		width: 100%
+
+	&__subtotal-list
+		@include font(11,13)
+		color: #4A4A4A
+		text-align: right
+		margin-bottom: 12px
+
+	&__subtotal-name
+		margin-right: 34px
+
+	&__total
+		@include font(16,19,300)
+		text-align: right
+		margin-bottom: 21px
+
+	&__total-name
+		margin-right: 34px
+
+	&__total-price
+		font-weight: 700
+
+	&__submit
+		@include size(273,50)
+		@include mobile
+			width: 100%
+
+	&__line
+		display: inline-block
+		@include size(273,1)
+		background: #E2E2E2
+		margin-bottom: 21px
+		@include mobile
+			width: 100%
+

@@ -1,0 +1,33 @@
+.menu-item
+	&__title
+		@include font(14,17)
+		color: $pink-text
+		text-transform: uppercase
+		margin-bottom: 12px
+
+	&__sub-item
+		@include font(14,17)
+		color: #6F6E6E
+		margin-bottom: 11px
+		margin-left: 20px
+
+
+	&__sub-link
+		text-decoration: none
+		position: relative
+		color: #6F6E6E
+		transition-duration: .3s
+		&:hover
+			margin-left: 10px
+			text-decoration: none
+			transition-duration: .3s
+			color: $pink-text
+			&:before
+				content: ''
+				display: inline-block
+				@include size(4,4)
+				@include offset(7,false,false,-10)
+				margin-right: 7px
+				transform: rotate(45deg)
+				border-top: solid 1px $pink-text
+				border-right: solid 1px $pink-text

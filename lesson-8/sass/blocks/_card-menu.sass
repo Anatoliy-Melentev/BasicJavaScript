@@ -1,0 +1,55 @@
+.card-menu
+	padding: 34px
+	@include background($color: white)
+	box-sizing: border-box
+	@include offset(75,0)
+	@include size(auto,auto)
+	z-index: 100
+	box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+	display: none
+
+	&__table
+		width: 100%
+		@include font(16, 46, 300)
+		text-transform: uppercase
+
+	&__row
+		display: grid
+		grid-template-columns: 4fr repeat(3, 2fr) 1fr
+		grid-gap: 5px
+
+	&__row:nth-child(2n)
+		@include background($color: #f1e4e699)
+
+	&__col
+		padding: 10px 10px 10px 30px
+		text-align: center
+		&:first-child
+			text-align: left
+
+		&:nth-child(2):after
+			content: ' шт.'
+		&:nth-child(3):before,
+		&:nth-child(4):before
+			content: '$'
+
+	&__col-th
+		padding: 10px 10px 30px 30px
+		&:nth-child(2):after
+			content: ''
+		&:nth-child(3):before,
+		&:nth-child(4):before
+			content: ''
+
+	&__total-sum
+		margin-top: 50px
+		text-transform: uppercase
+		text-align: right
+		@include font(16, 19, 300)
+
+	&__total-price
+		margin-left: 50px
+		font-weight: 700
+		&:before
+			content: '$'
+
