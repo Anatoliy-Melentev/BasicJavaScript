@@ -1,0 +1,25 @@
+.content-form
+	padding: 64px 0 96px 0
+
+	&__wrp
+		display: flex
+		justify-content: space-between
+
+		@include mobile
+			flex-direction: column
+
+	&__registration
+		width: 360px
+		margin-right: 64px
+
+		@include tablet
+			margin-right: 22px
+
+		@include mobile
+			width: 100%
+
+	&__loyalty
+		flex-grow: 1
+
+	&__item
+		@include tablet

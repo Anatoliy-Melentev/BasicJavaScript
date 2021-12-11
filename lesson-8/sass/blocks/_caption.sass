@@ -1,0 +1,18 @@
+.caption
+	background-color: $pink-caption
+
+	&__wrp
+		height: 148px
+		@include flex-space()
+		align-items: center
+		@include mobile
+			@include flex-center(column)
+			height: auto
+			padding: 24px 0 48px
+
+	&__title
+		@include font(24,29)
+		color: $pink-text
+		text-transform: uppercase
+		@include mobile
+			margin-bottom: 32px

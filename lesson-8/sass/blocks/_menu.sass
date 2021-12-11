@@ -1,0 +1,196 @@
+.menu
+	position: relative
+
+	&__menu
+		position: absolute
+		z-index: 100
+		display: none
+		width: 100%
+		box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+		background-color: white
+		&:focus-within
+			display: block
+		&:hover
+			display: block
+
+	&__button
+		border: none
+		background-color: transparent
+		text-transform: uppercase
+		@include font(14,17,400)
+		margin: 0 11px
+		color: #6F6E6E
+		@include flex-center()
+
+		&:hover
+			color: black
+
+		&:hover + .menu__menu,
+		&:focus + .menu__menu
+			display: block
+
+		&:hover > .menu__icon
+			fill: black
+
+		@include mobile
+			@include font(10,12)
+		@include mini
+			margin: 0 0
+
+	&__icon
+		fill: #6F6E6E
+		margin-left: 10px
+
+	&__label
+		margin: 10px
+		&_red
+			color: red
+			&::before
+				box-shadow: 0 0 0 1px red
+			&:hover
+				color: red
+				opacity: 0.8
+				&::before
+					box-shadow: 0 0 0 1px red
+					opacity: 0.8
+		&_orange
+			color: orange
+			&::before
+				box-shadow: 0 0 0 1px orange
+			&:hover
+				color: orange
+				opacity: 0.8
+				&::before
+					box-shadow: 0 0 0 1px orange
+					opacity: 0.8
+		&_yellow
+			color: yellow
+			&::before
+				box-shadow: 0 0 0 1px yellow
+			&:hover
+				color: yellow
+				opacity: 0.8
+				&::before
+					box-shadow: 0 0 0 1px yellow
+					opacity: 0.8
+		&_green
+			color: green
+			&::before
+				box-shadow: 0 0 0 1px green
+			&:hover
+				color: green
+				opacity: 0.8
+				&::before
+					box-shadow: 0 0 0 1px green
+					opacity: 0.8
+		&_light-blue
+			color: lightblue
+			&::before
+				box-shadow: 0 0 0 1px lightblue
+			&:hover
+				color: lightblue
+				opacity: 0.8
+				&::before
+					box-shadow: 0 0 0 1px lightblue
+					opacity: 0.8
+		&_blue
+			color: blue
+			&::before
+				box-shadow: 0 0 0 1px blue
+			&:hover
+				color: blue
+				opacity: 0.8
+				&::before
+					box-shadow: 0 0 0 1px blue
+					opacity: 0.8
+		&_purple
+			color: purple
+			&::before
+				box-shadow: 0 0 0 1px purple
+			&:hover
+				color: purple
+				opacity: 0.8
+				&::before
+					box-shadow: 0 0 0 1px purple
+					opacity: 0.8
+
+		&_xxl::before
+			width: 44px
+		&_xl::before
+			width: 38px
+			margin: 0 13px 3px 3px
+		&_l::before
+			width: 32px
+			margin: 0 16px 3px 6px
+		&_m::before
+			width: 26px
+			margin: 0 19px 3px 9px
+		&_s::before
+			width: 20px
+			margin: 0 22px 3px 12px
+		&_xs::before
+			width: 14px
+			margin: 0 25px 3px 15px
+		&_size
+			&::before
+				border-radius: 10px
+
+	&__radio:checked +
+		.menu__label:before
+			background-color: $pink-text
+
+	&__radio:checked +
+		.menu__label_red:before
+			background-color: red
+	&__radio:checked +
+		.menu__label_orange:before
+			background-color: orange
+	&__radio:checked +
+		.menu__label_yellow:before
+			background-color: yellow
+	&__radio:checked +
+		.menu__label_green:before
+			background-color: green
+	&__radio:checked +
+		.menu__label_light-blue:before
+			background-color: lightblue
+	&__radio:checked +
+		.menu__label_blue:before
+			background-color: blue
+	&__radio:checked +
+		.menu__label_purple:before
+			background-color: purple
+
+	&__quality-form
+		@include flex-center(row-reverse)
+		@include size(200,200)
+
+	&__range-quality
+		transform: rotate(-90deg)
+		margin: 60px 0px 60px 0px
+
+	&__output
+		@include font(50,60)
+		@include size(70,70)
+		float: right
+
+	&__price-form
+		display: grid
+		grid-template-columns: 35px 1fr 40px
+		vertical-align: middle
+		padding: 10px
+
+	&__label-range
+		display: inline-block
+		line-height: 45px
+
+	&__output-price
+		display: inline-block
+		width: auto
+
+	&__range-price
+		display: block
+		float: none
+		grid-column: 1/-1
+		width: 100% !important
+

@@ -1,0 +1,24 @@
+.registration-form
+
+	&__title-name
+		@include font(16,19,300)
+		color: $black-text
+		margin-bottom: 20px
+
+	&__valid-text
+		@include font(13,16,300)
+		color: #B1B1B1
+		margin-bottom: 40px
+
+	&__submit-img
+		margin-left: 20px
+
+	&__submit
+		@include size(auto,50)
+		box-sizing: border-box
+		&:active
+			.registration-form__submit-img
+				margin-left: 25px
+
+	&__label-wrp
+		display: flex

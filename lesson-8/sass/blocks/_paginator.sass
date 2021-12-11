@@ -1,0 +1,38 @@
+.paginator
+	border: 1px solid #EBEBEB
+	border-radius: 5px
+	display: inline-block
+	text-align: center
+	margin: 48px auto 96px
+
+	&__button
+		display: inline-block
+		background-color: transparent
+		padding: 14px
+		border: none
+		&:hover
+			.paginator__svg
+				fill: $pink-text
+	&__svg
+		margin-top: -4px
+
+	&__list
+		display: inline-block
+		padding: 5px 0
+
+	&__item
+		display: inline-block
+
+	&__link
+		@include font(16,20)
+		text-decoration: none
+		color: #EBEBEB
+		padding: 14px 8px
+		&:hover
+			color: $pink-text
+
+	&__dots
+		margin: 0 -8px
+		color: #EBEBEB
+		>.paginator__link
+			padding: 8px 0

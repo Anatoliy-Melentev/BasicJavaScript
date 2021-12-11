@@ -1,0 +1,47 @@
+.slider
+	@include size(full,777)
+	display: block
+	z-index: 1
+	position: relative
+	@include tablet
+		@include wrapper(85%)
+	@include mobile
+		@include wrapper(166%)
+
+	&__wrp
+		@include tablet
+			@include offset(0,0,0,0)
+
+	&__img-list,
+	&__img-item
+		background-color: #f7f7f7
+		height: 100%
+		@include mobile
+			@include size(full,full)
+			position: relative
+
+	&__img
+		height: 777px
+		width: auto !important
+		margin: 0 auto
+		@include tablet
+			height: 100%
+		@include mobile
+			@include size(full,auto)
+			width: 100% !important
+			@include offset(0,false,0)
+
+	&__control
+		width: 47px
+
+	&__control-icon
+		content: ''
+		background: none
+		@include flex-center()
+		@include background($color: rgba(42, 42, 42, 0.15))
+
+	&__control-svg
+		fill: black
+
+	&__control:hover svg
+		fill: $pink-icon

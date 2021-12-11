@@ -1,0 +1,53 @@
+.search-form
+	display: flex
+	align-items: center
+	background-color: transparent
+	padding: 1px
+
+
+	&__input
+		display: block
+		border: none
+		@include size(0,39)
+		background-color: transparent
+		border-top-left-radius: 19px
+		border-bottom-left-radius: 19px
+		text-indent: 20px
+		outline: none
+		transition-duration: .5s
+
+	&__input:hover,
+	&__input:focus,
+	&:hover &__input,
+	&:focus &__input
+		width: 200px
+		background-color: white
+		outline: none
+		transition-duration: .5s
+
+	&__submit
+		display: block
+		padding: 6px 15px 4px
+		background-color: transparent
+		border: none
+		cursor: pointer
+		border-top-right-radius: 19px
+		border-bottom-right-radius: 19px
+
+	&__submit-img
+		fill: white
+
+	&__submit:hover,
+	&__submit:focus,
+	&:hover &__submit,
+	&:focus &__submit,
+	&__input:hover + &__submit,
+	&__input:focus + &__submit
+		background-color: white
+		outline: none
+
+	&:hover &__submit-img,
+	&:focus &__submit-img,
+	&__input:hover + &__submit > &__submit-img,
+	&__input:focus + &__submit > &__submit-img
+		fill: gray

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/cookie.js" defer></script>
+	<script src="js/code.js" defer></script>
+	<title>Shop</title>
+</head>
+<body class="page">
+<header class="header">
+	<div class="container header__wrp">
+		<div class="header__wrp-controls">
+			<a class="header__logo-link" href="index.html">
+				<svg class="header__logo-icon" width="44" height="38" viewBox="0 0 44 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<rect width="44" height="38" fill="url(#pattern0)"/>
+					<defs>
+						<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+							<use xlink:href="#image0" transform="scale(0.0227273 0.0263158)"/>
+						</pattern>
+						<image id="image0" width="44" height="38" xlink:href="data:image/png;base64,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"/>
+					</defs>
+				</svg>
+			</a>
+			<div class="header__search-form">
+				<form class="header__form search-form" action="#">
+					<label class="visually-hidden" for="search-form"></label>
+					<input id="search-form" class="search-form__input" type="text">
+					<button type="submit" class="search-form__submit">
+						<svg width="27" height="28" class="search-form__submit-img"><use xlink:href="img/icons.svg#search"></use></svg>
+					</button>
+				</form>
+			</div>
+		</div>
+		<div class="header__wrp-controls">
+			<button class="header__menu-btn" type="button">
+				<svg class="header__icon" width="32" height="23"><use xlink:href="img/icons.svg#menu"></use></svg>
+			</button>
+			<nav class="header__nav">
+				<div class="header__menu-cls-btn close-btn"></div>
+				<h2 class="header__menu-title">menu</h2>
+				<ul class="header__menu-list">
+					<li class="header__menu-item menu-item">
+						<h3 class="menu-item__title">man</h3>
+						<ul class="menu-item__sub-list">
+							<li class="menu-item__sub-item"><a class="menu-item__sub-link" href="#">Accessories</a></li>
+							<li class="menu-item__sub-item"><a class="menu-item__sub-link" href="#">Bags</a></li>
+							<li class="menu-item__sub-item"><a class="menu-item__sub-link" href="#">Denim</a></li>
+							<li class="menu-item__sub-item"><a class="menu-item__sub-link" href="#">T-Shirts</a></li>
+						</ul>
+					</li>
+					<li class="header__menu-item menu-item">
+						<h3 class="menu-item__title">woman</h3>
+						<ul class="menu-item__sub-list">
+							<li class="menu-item__sub-item"><a class="menu-item__sub-link" href="#">Accessories</a></li>
+							<li class="menu-item__sub-item"><a class="menu-item__sub-link" href="#">Jackets & Coats</a></li>
+							<li class="menu-item__sub-item"><a class="menu-item__sub-link" href="#">Polos</a></li>
+							<li class="menu-item__sub-item"><a class="menu-item__sub-link" href="#">T-Shirts</a></li>
+							<li class="menu-item__sub-item"><a class="menu-item__sub-link" href="#">Shirts</a></li>
+						</ul>
+					</li>
+					<li class="header__menu-item menu-item">
+						<h3 class="menu-item__title">kids</h3>
+						<ul class="menu-item__sub-list">
+							<li class="menu-item__sub-item"><a class="menu-item__sub-link" href="#">Accessories</a></li>
+							<li class="menu-item__sub-item"><a class="menu-item__sub-link" href="#">Jackets & Coats</a></li>
+							<li class="menu-item__sub-item"><a class="menu-item__sub-link" href="#">Polos</a></li>
+							<li class="menu-item__sub-item"><a class="menu-item__sub-link" href="#">T-Shirts</a></li>
+							<li class="menu-item__sub-item"><a class="menu-item__sub-link" href="#">Shirts</a></li>
+							<li class="menu-item__sub-item"><a class="menu-item__sub-link" href="#">Bags</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<a class="header__link" href="registration.html">
+				<svg class="header__icon" width="29" height="29"><use xlink:href="img/icons.svg#login"></use></svg>
+			</a>
+			<button class="header__link" href="cart.html" type="button">
+				<span class="header__quantity" id="quantity-icon">0</span>
+				<svg class="header__icon" width="33" height="29"><use xlink:href="img/icons.svg#cart"></use></svg>
+			</button>
+			<div class="header__card-menu card-menu">
+				<table class="card-menu__table" id="cart-list">
+					<thead>
+					<tr id="header-row" class="card-menu__row">
+						<th class="card-menu__col card-menu__col-th">Name</th>
+						<th class="card-menu__col card-menu__col-th">Quantity</th>
+						<th class="card-menu__col card-menu__col-th">Price</th>
+						<th class="card-menu__col card-menu__col-th">Sum</th>
+						<th class="card-menu__col card-menu__col-th"></th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr class="card-menu__row">
+						<td class="card-menu__col">Name</td>
+						<td class="card-menu__col">Quantity</td>
+						<td class="card-menu__col">Price</td>
+						<td class="card-menu__col">Sum</td>
+						<td class="card-menu__col"><span class="close-btn"></span></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="card-menu__total-sum">
+					<span class="card-menu__total-text">Total sum:</span>
+					<span class="card-menu__total-price" id="total-price">0</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<main>
+	<section class="caption">
+		<div class="caption__wrp container">
+			<div class="caption__title-wrp">
+				<h1 class="caption__title">New arrivals</h1>
+			</div>
+			<div class="breadcrumbs">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Home</a></li>
+					<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Men</a></li>
+					<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link breadcrumbs__link_active">New arrivals</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="products container">
+		<h2 class="products__title visually-hidden">Catalog</h2>
+		<div class="products__filters">
+			<ul class="products__filters-list filters">
+				<li class="filters__list harmonic">
+					<button class="menu__button harmonic__title-button" type="button">
+						<span class="harmonic__title-name">Filter</span>
+						<svg class="menu__icon harmonic__icon" width="15" height="10"><use xlink:href="img/icons.svg#filter"></use></svg>
+					</button>
+					<ul class="menu__menu harmonic__title-list">
+						<h3 class="menu__button harmonic__title" type="button">
+							<span class="harmonic__title-name">Filter</span>
+							<svg class="menu__icon harmonic__icon" width="15" height="10"><use xlink:href="img/icons.svg#filter"></use></svg>
+						</h3>
+						<li class="harmonic__title-item">
+							<button autofocus class="harmonic__button">Category</button>
+							<ul class="harmonic__list">
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Accessories</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Bags</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Denim</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Hoodies & Sweatshirts</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Jackets & Coats</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Polos</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Shirts</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Shoes</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Sweaters & Knits</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">T-Shirts</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Tanks</a></li>
+							</ul>
+						</li>
+						<li class="harmonic__title-item">
+							<button class="harmonic__button">Brand</button>
+							<ul class="harmonic__list">
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Accessories</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Bags</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Denim</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Hoodies & Sweatshirts</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Jackets & Coats</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Polos</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Shirts</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Shoes</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Sweaters & Knits</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">T-Shirts</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Tanks</a></li>
+							</ul>
+						</li>
+						<li class="harmonic__title-item">
+							<button class="harmonic__button">Designer</button>
+							<ul class="harmonic__list">
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Accessories</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Bags</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Denim</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Hoodies & Sweatshirts</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Jackets & Coats</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Polos</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Shirts</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Shoes</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Sweaters & Knits</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">T-Shirts</a></li>
+								<li class="harmonic__item"><a href="#" class="harmonic__link">Tanks</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="filters__list menu">
+					<button class="menu__button" type="button">
+						Trending&nbsp;now
+						<svg class="menu__icon" width="11" height="6"><use xlink:href="img/icons.svg#angle-bottom"></use></svg>
+					</button>
+					<div class="menu__menu">
+						<form action="#" class="form menu__form">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<input type="radio" name="radio-actual" class="menu__radio form__radio visually-hidden" id="color__actual">
+									<label for="color__actual" class="menu__label form__radio-label">Actual</label>
+								</li>
+								<li class="menu__item">
+									<input type="radio" name="radio-actual" class="menu__radio menu__radio-color form__radio visually-hidden" id="color__notactual">
+									<label for="color__notactual" class="menu__label form__radio-label">Not actual</label>
+								</li>
+							</ul>
+						</form>
+					</div>
+				</li>
+				<li class="filters__list menu">
+					<button class="menu__button" type="button">
+						Size
+						<svg class="menu__icon" width="11" height="6"><use xlink:href="img/icons.svg#angle-bottom"></use></svg>
+					</button>
+					<div class="menu__menu">
+						<form action="#" class="form menu__form">
+							<ul class="menu__list">
+								<li class="menu__item menu__item-size">
+									<input type="checkbox" name="checkbox-size" class="menu__checkbox menu__checkbox-size form__checkbox visually-hidden" id="size__xxl">
+									<label for="size__xxl" class="menu__label menu__label-checkbox_size form__checkbox-label">XXL</label>
+								</li>
+								<li class="menu__item">
+									<input type="checkbox" name="checkbox-size" class="menu__checkbox menu__checkbox-size form__checkbox visually-hidden" id="size__xl">
+									<label for="size__xl" class="menu__label menu__label-checkbox_size form__checkbox-label">XL</label>
+								</li>
+								<li class="menu__item">
+									<input type="checkbox" name="checkbox-size" class="menu__checkbox menu__checkbox-size form__checkbox visually-hidden" id="size__l">
+									<label for="size__l" class="menu__label menu__label-checkbox_size form__checkbox-label">L</label>
+								</li>
+								<li class="menu__item">
+									<input type="checkbox" name="checkbox-size" class="menu__checkbox menu__checkbox-size form__checkbox visually-hidden" id="size__m">
+									<label for="size__m" class="menu__label menu__label-checkbox_size form__checkbox-label">M</label>
+								</li>
+								<li class="menu__item">
+									<input type="checkbox" name="checkbox-size" class="menu__checkbox menu__checkbox-size form__checkbox visually-hidden" id="size__s">
+									<label for="size__s" class="menu__label menu__label-checkbox_size form__checkbox-label">S</label>
+								</li>
+								<li class="menu__item">
+									<input type="checkbox" name="checkbox-size" class="menu__checkbox menu__checkbox-size form__checkbox visually-hidden" id="size__xs">
+									<label for="size__xs" class="menu__label menu__label-checkbox_size form__checkbox-label">XS</label>
+								</li>
+							</ul>
+						</form>
+					</div>
+				</li>
+				<li class="filters__list menu">
+					<button class="menu__button" type="button">
+						Price
+						<svg class="menu__icon" width="11" height="6"><use xlink:href="img/icons.svg#angle-bottom"></use></svg>
+					</button>
+					<div class="menu__menu">
+						<form action="#" class="menu__price-form" oninput="resultfrom.value=from.value">
+							<label for="resultfrom" class="menu__label menu__label-range">От</label>
+							<output name="resultfrom" for="from" id="resultfrom" class="menu__output menu__output-price">1000</output>
+							<label for="from" class="menu__label menu__label-range">руб.</label>
+							<input type="range" name="from" class="menu__range menu__range-price" id="from" min="1000" max="99000" step="1000" value="10000">
+						</form>
+						<form action="#" class="menu__price-form" oninput="resultto.value=to.value">
+							<label for="resultto" class="menu__label menu__label-range">До</label>
+							<output name="resultto" for="resultto" id="resultto" class="menu__output menu__output-price">99000</output>
+							<label for="to" class="menu__label menu__label-range">руб.</label>
+							<input type="range" name="to" class="menu__range menu__range-price" id="to" min="1000" max="99000" step="1000" value="99000">
+						</form>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<ul class="products__list" id="products">
+			<li class="products__item product" data-id="1">
+				<a class="products__link" href="product.html">
+					<img class="product__img" src="img/product_1.jpg" alt="product">
+					<div class="product__desc">
+						<h3 class="product__title">Jacket</h3>
+						<p class="product__text">Known for her sculptural takes on traditional tailoring, Australian
+							arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+						<span class="product__price">$61.01</span>
+					</div>
+				</a>
+			</li>
+			<li class="products__item product" data-id="2">
+				<a class="products__link" href="product.html">
+					<img class="product__img" src="img/product_2.jpg" alt="product">
+					<div class="product__desc">
+						<h3 class="product__title">Suit</h3>
+						<p class="product__text">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+						<span class="product__price">$52.02</span>
+					</div>
+				</a>
+			</li>
+			<li class="products__item product" data-id="3">
+				<a class="products__link" href="product.html">
+					<img class="product__img" src="img/product_3.jpg" alt="product">
+					<div class="product__desc">
+						<h3 class="product__title">Hoody</h3>
+						<p class="product__text">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+						<span class="product__price">$43.04</span>
+					</div>
+				</a>
+			</li>
+			<li class="products__item product" data-id="4">
+				<a class="products__link" href="product.html">
+					<img class="product__img" src="img/product_4.jpg" alt="product">
+					<div class="product__desc">
+						<h3 class="product__title">Pants</h3>
+						<p class="product__text">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+						<span class="product__price">$34.08</span>
+					</div>
+				</a>
+			</li>
+			<li class="products__item product" data-id="5">
+				<a class="products__link" href="product.html">
+					<img class="product__img" src="img/product_5.jpg" alt="product">
+					<div class="product__desc">
+						<h3 class="product__title">Blazer</h3>
+						<p class="product__text">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+						<span class="product__price">$25.16</span>
+					</div>
+				</a>
+			</li>
+			<li class="products__item product" data-id="6">
+				<a class="products__link" href="product.html">
+					<img class="product__img" src="img/product_6.jpg" alt="product">
+					<div class="product__desc">
+						<h3 class="product__title">Blouse</h3>
+						<p class="product__text">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+						<span class="product__price">$16.32</span>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<div class="products__paginator paginator">
+			<button class="paginator__prev paginator__button"><svg class="paginator__svg" width="8" height="14"><use xlink:href="img/icons.svg#angle-prev"></use></svg></button>
+			<ul class="paginator__list">
+				<li class="paginator__item"><a href="" class="paginator__link">1</a></li>
+				<li class="paginator__item"><a href="" class="paginator__link">2</a></li>
+				<li class="paginator__item"><a href="" class="paginator__link">3</a></li>
+				<li class="paginator__item"><a href="" class="paginator__link">4</a></li>
+				<li class="paginator__item"><a href="" class="paginator__link">5</a></li>
+				<li class="paginator__item"><a href="" class="paginator__link">6</a></li>
+				<li class="paginator__item paginator__dots"><a href="" class="paginator__link">.....</a></li>
+				<li class="paginator__item"><a href="" class="paginator__link">20</a></li>
+			</ul>
+			<button class="paginator__next paginator__button"><svg class="paginator__svg" width="8" height="14"><use xlink:href="img/icons.svg#angle-next"></use></svg></button>
+		</div>
+	</section>
+</main>
+<footer class="footer">
+	<section class="footer__feedback feedback">
+		<div class="feedback__main container">
+			<h2 class="feedback__title visually-hidden">Feedback</h2>
+			<div class="feedback__item review">
+				<img class="review__userpic" src="img/avatar.jpg" alt="Avatar">
+				<q class="review__message">&ldquo;Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum&ldquo;</q>
+			</div>
+			<div class="feedback__item writeus">
+				<h3 class="writeus__title">subscribe</h3>
+				<span class="writeus__desc">for our newletter and promotion</span>
+				<form class="writeus__form form" action="#">
+					<input class="form__email writeus__input" type="email" placeholder="Enter Your Email">
+					<input class="form__submit writeus__submit" type="submit" value="Subscribe">
+				</form>
+			</div>
+		</div>
+	</section>
+	<section class="footer__end-info end-info">
+		<h2 class="footer__title visually-hidden">Footer</h2>
+		<div class="end-info__main container">
+			<div class="end-info__item copyright">
+				<p class="copyright__info">© <time datetime="2021">2021</time> Brand All Rights Reserved.</p>
+			</div>
+			<div class="end-info__item soc-network">
+				<ul class="soc-network__list">
+					<li class="soc-network__item">
+						<a class="soc-network__link" href="#">
+							<svg class="soc-network__icon" width="9" height="15"><use xlink:href="img/icons.svg#facebook"></use></svg>
+						</a>
+					</li>
+					<li class="soc-network__item">
+						<a class="soc-network__link" href="#">
+							<svg class="soc-network__icon" width="16" height="15"><use xlink:href="img/icons.svg#instagram"></use></svg>
+						</a>
+					</li>
+					<li class="soc-network__item">
+						<a class="soc-network__link" href="#">
+							<svg class="soc-network__icon" width="13" height="16"><use xlink:href="img/icons.svg#pinterest"></use></svg>
+						</a>
+					</li>
+					<li class="soc-network__item">
+						<a class="soc-network__link" href="#">
+							<svg class="soc-network__icon" width="17" height="14"><use xlink:href="img/icons.svg#twitter"></use></svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+</footer>
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

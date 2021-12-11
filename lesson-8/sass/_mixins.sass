@@ -1,0 +1,91 @@
+@mixin font($font-size: 22, $line-height: 24, $font-weight: 400, $font-style: normal)
+	font-size: $font-size+px
+	line-height: $line-height+px
+	font-weight: $font-weight
+	font-style: $font-style
+
+@mixin flex-center($direction: row)
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: $direction
+
+@mixin flex-space($space: between, $direction: row)
+	display: flex
+	flex-direction: $direction
+	justify-content: space-+$space
+
+@mixin offset($top: false,$right: false, $bottom: false, $left: false)
+	position: absolute
+	margin: auto
+	@if $top
+		top: $top+px
+	@if $right
+		right: $right+px
+	@if $bottom
+		bottom: $bottom+px
+	@if $left
+		left: $left+px
+
+@mixin size($width: auto, $height: auto, $unit: px)
+	@if $width == auto
+		width: $width
+	@else if $width == full
+		width: 100%
+	@else
+		width: $width+$unit
+	@if $height == auto
+		height: $height
+	@else if $height == full
+		height: 100%
+	@else
+		height: $height+$unit
+
+@mixin wrapper($ratio: 50%)
+	position: relative
+	height: 0
+	border: none
+	padding-top: $ratio
+
+@mixin background($url: false,$size: cover,$pos: center,$color: transparent,$repeat: no-repeat)
+	@if $size == full
+		background-size: 100% 100%
+	@else
+		background-size: $size
+	background-color: $color
+	@if $url != false
+		background-image: url($url)
+	background-position: $pos
+	background-repeat: $repeat
+
+@mixin add-fonts($name)
+	$weights: ("Thin": 100, "Light": 300, "Regular": 400, "Bold": 700, "Black": 900)
+	$styles: (normal, italic)
+	$path: "../fonts/"
+	@each $weightname,$weight in $weights
+		@each $style in $styles
+			@if $style == italic
+				@if $weightname == "Regular"
+					$weightname: "Italic"
+				@else
+					$weightname: $weightname+"Italic"
+
+			$url: $path+$name+"-"+$weightname+"."
+
+			@font-face
+				font-family: $name
+				font-style: $style
+				font-weight: $weight
+				src: url($url+"woff2") format("woff2"), url($url+"woff") format("woff"), url($url+"ttf") format("truetype")
+
+@mixin tablet
+	@media (max-width: $tablet-width)
+		@content
+
+@mixin mobile
+	@media (max-width: $mobile-width)
+		@content
+
+@mixin mini
+	@media (max-width: $mini-width)
+		@content

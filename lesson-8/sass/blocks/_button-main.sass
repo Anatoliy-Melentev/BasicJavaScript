@@ -1,0 +1,51 @@
+.button-main
+	background-color: $pink-button
+	@include font(14,17)
+	color: white
+	border: none
+	text-transform: uppercase
+	padding: 14px 38px
+	position: relative
+	z-index: 1
+	@include mobile
+		@include font(12,14)
+		padding: 8px 22px
+
+	&:hover
+		transform: scale(1.01,1.01)
+
+	&:active
+		transform: scale(0.9,0.9)
+
+	&_transparent
+		margin: 48px 0 95px 0
+		background-color: transparent
+		border: 1px solid #FF6A6A
+		@include font(16,19)
+		color: $pink-border-button
+		transition-property: background-color, color
+		transition-duration: .5s
+		@include mobile
+			@include font(12,14)
+			padding: 8px 22px
+
+		&:hover
+			background-color: $pink-button
+			color: white
+			transition-property: background-color, color
+			transition-duration: .5s
+
+		&:active
+			transform: scale(0.9,0.9)
+
+	&_gray
+		border: 1px solid #A4A4A4
+		color: #A4A4A4
+
+		&:hover
+			background-color: #A4A4A4
+			color: white
+			transition-duration: .5s
+
+		&:active
+			transform: scale(0.9,0.9)

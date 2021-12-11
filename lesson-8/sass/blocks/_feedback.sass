@@ -1,0 +1,15 @@
+.feedback
+
+	&__main
+		@include flex-space()
+		@include tablet
+			flex-direction: column
+			height: auto
+
+	&__item
+		@include size(auto,448)
+		@include flex-center(column)
+		text-align: center
+		@include tablet
+			margin: 0 auto
+			height: auto

@@ -1,0 +1,103 @@
+.harmonic
+	width: 360px
+	position: relative
+
+	&__title-name
+		@include mobile
+			display: none
+
+	&__icon
+		@include mobile
+			@include size(37,25)
+			margin: 0
+
+	&__title-button
+		color: $black-text
+		> .harmonic__icon
+			fill: $black-text
+
+	&__title
+		display: inline
+		color: $pink-text
+		margin-bottom: 16px
+		> .harmonic__icon
+			fill: $pink-text
+		@include mobile
+			margin-left: 11px
+
+	&__title-list
+		text-align: left
+		width: 360px
+		@include offset(-12,false,false,-12)
+		padding: 14px 18px
+		box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+		@include mobile
+			margin-left: 0px
+
+	&__title-item
+		margin-bottom: 18px
+
+	&__list
+		height: auto
+		max-height: 0
+		overflow: hidden
+		padding: 0 17px
+		box-sizing: border-box
+		-webkit-transition: max-height 1s ease
+		-moz-transition: max-height 1s ease
+		-o-transition: max-height 1s ease
+		transition: max-height 1s ease
+
+	&__item
+		margin-bottom: 11px
+
+	&__link
+		@include font(14,17)
+		color: #6F6E6E
+		text-decoration: none
+		position: relative
+			transition-duration: .3s
+		&:hover
+			color: $pink-text
+			margin-left: 10px
+			transition-duration: .3s
+			&:before
+				content: ''
+				display: inline-block
+				@include size(4,4)
+				@include offset(7,false,false,-10)
+				margin-right: 7px
+				transform: rotate(45deg)
+				border-top: solid 1px $pink-text
+				border-right: solid 1px $pink-text
+
+	&__button
+		@include size(full,37)
+		border: none
+		border-bottom: 1px solid #EBEBEB
+		background-color: transparent
+		padding: 0
+		text-align: left
+		display: flex
+		align-items: center
+		color: $pink-text
+		@include font(14,17)
+		text-transform: uppercase
+		&::before
+			content: ""
+			display: inline-block
+			background-color: $pink-icon
+			@include size(5,37)
+			margin-right: 11px
+
+		&:focus
+			outline: none
+			+ .harmonic__list
+				max-height: 1000px
+				padding: 24px 17px
+				-webkit-transition: max-height 1s ease
+				-moz-transition: max-height 1s ease
+				-o-transition: max-height 1s ease
+				transition: max-height 1s ease
+
+
